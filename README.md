@@ -66,7 +66,7 @@ shxrkcleaner --browser --discord --steam   # Individual targets
 
 ```cmd
 pip install pyinstaller
-pyinstaller --onefile --name shxrkcleaner --icon=NONE run.py
+pyinstaller --onefile --name shxrkcleaner --icon=img/logo.ico run.py
 ```
 
 Output: `dist/shxrkcleaner.exe`
