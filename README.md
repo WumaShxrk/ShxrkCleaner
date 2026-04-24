@@ -1,6 +1,6 @@
 # 🦈ShxrkCleaner
 
-Windows system cleaner — fast, minimal, 27 targets, CLI-first.
+Windows system cleaner — fast, minimal, 35 targets, CLI-first.
 
 ## Quick Start
 
@@ -26,12 +26,12 @@ shxrkcleaner --deep
 ```cmd
 shxrkcleaner              # Interactive menu
 shxrkcleaner --quick      # Quick clean (6 targets)
-shxrkcleaner --deep       # Deep clean (all 27 targets)
+shxrkcleaner --deep       # Deep clean (all 35 targets)
 shxrkcleaner --deep -y    # Skip confirmation
 shxrkcleaner --browser --discord --steam   # Individual targets
 ```
 
-## All 27 Targets
+## All 35 Targets
 
 | Flag | Target |
 |---|---|
@@ -61,6 +61,14 @@ shxrkcleaner --browser --discord --steam   # Individual targets
 | `--delivery` | Delivery Optimization cache |
 | `--telegram` | Telegram Desktop cache |
 | `--wer` | Windows Error Reports |
+| `--epic` | Epic Games cache & crash reports |
+| `--riot` | Riot Games logs & crashes |
+| `--ea` | EA App & Legacy Origin cache |
+| `--battlenet` | Battle.net cache & telemetry |
+| `--ubisoft` | Ubisoft Connect cache & spool data |
+| `--whatsapp` | WhatsApp Desktop (UWP & Electron) cache |
+| `--obs` | OBS Studio updates, crashes & logs |
+| `--gog` | GOG Galaxy webcache & logs |
 
 ## Build as .exe
 
