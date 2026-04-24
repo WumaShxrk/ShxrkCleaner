@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shxrkcleaner"
+version = "1.0.0"
+description = "ShxrkCleaner — Windows system cleaner CLI tool"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+[project.scripts]
+shxrkcleaner = "cleaner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cleaner*"]

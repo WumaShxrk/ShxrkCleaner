@@ -1,0 +1,21 @@
+# ShxrkCleaner Changelog & Modifications
+
+## New Platforms and Applications Added (Caches & Logs)
+The following applications have been integrated for optimal cleaning:
+- **Epic Games** (`--epic`): Web caches and crash reports from the Epic Games Launcher.
+- **Riot Games** (`--riot`): Log files and crash reports from the Riot Client and its subdirectories.
+- **EA App / Origin** (`--ea`): Web caches, logs, and obsolete caches related to Electronic Arts Desktop and the legacy Origin Launcher.
+- **Battle.net** (`--battlenet`): Telemetry files, crash logs, and browser cache built into the Blizzard launcher.
+- **Ubisoft Connect** (`--ubisoft`): "Spool" data, caches, and logs from the Ubisoft Game Launcher.
+- **WhatsApp Desktop** (`--whatsapp`): Local caches for both the UWP and Electron versions of WhatsApp for Windows.
+- **OBS Studio** (`--obs`): Old streaming logs, crash reports, and obsolete update data.
+- **GOG Galaxy** (`--gog`): Launcher web cache and local log files.
+
+## Engine Optimizations (`engine.py`)
+- **Dynamic Multithreading**: `MAX_WORKERS` was changed from a hardcoded constant (8) to a dynamic value calculated via `os.cpu_count()` (capped at 32 threads maximum). This method intelligently scales the deletion processes based on CPU power, offering significantly better performance on modern PCs.
+- **Safe Recursive Scanning**: The deletion algorithm now targets specific subdirectories (`Cache`, `Logs`, `Crashes`) instead of iterating blindly, avoiding the deletion of vital game and application data.
+
+## User Interface (`cli.py` & `display.py`)
+- **Windows Encoding Fix**: UTF-8 console output is enforced via `sys.stdout.reconfigure(encoding='utf-8')` to prevent `UnicodeEncodeError` when the Windows console isn't natively set to the 65001 code page.
+- **Extended Interactive Menu**: Added corresponding icons to the visual mode (🎮, 🗡️, ⚽, ⚔️, 🦅, 💬, 🎥, 🌌) for each new application.
+- **Updated `--deep` Command**: The deep cleaning function now includes these 8 new additions, ensuring maximum system maintenance with a single command.
